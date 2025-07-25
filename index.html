@@ -13,9 +13,22 @@
 
   <script>
     function merhabaDe() {
-      let isim = document.getElementById("isimKutusu").value;
+        let isim = document.getElementById("isimKutusu").value;
+        let baslik = document.getElementById("baslik");
+        let altYazi = document.getElementById("altYazi");
+        let buton = document.getElementById("buton");
       alert("SELAM " + isim + "!");
+      if (isim === "") {
+    alert("Lan adını yazsana!");
+    return;
     }
+  baslik.innerText = "Selam " + isim.toUpperCase() + " 👋";
+  document.body.style.backgroundColor = "#222";
+
+  altYazi.innerText = "Artık senin siten burası.";
+  buton.innerText = "Tekrar Gönder";
+  document.getElementById("isimKutusu").value = "";
+}
   </script>
 </body>
 </html>
