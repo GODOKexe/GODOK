@@ -1,7 +1,76 @@
+/* Temel stil ayarları */
 body {
+  background-color: #121212;
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
   transition: background-color 0.5s;
 }
 
-h1, p {
+/* Başlıklar */
+h1, h2, h3 {
+  color: #00ffcc;
+  text-align: center;
+  margin-top: 30px;
   transition: all 0.3s;
 }
+
+/* Paragraflar */
+p {
+  font-size: 1.1em;
+  padding: 0 20px;
+  transition: all 0.3s;
+}
+
+/* Butonlar */
+button {
+  background-color: #00ffcc;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px auto;
+  display: block;
+  font-size: 1em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #00c2a8;
+}
+
+/* Kutular, bölmeler */
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #00ffcc44;
+}
+
+/* Linkler */
+a {
+  color: #00ffcc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Scrollbar özelleştirme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #1e1e1e;
+}
+::-webkit-scrollbar-thumb {
+  background: #00ffcc;
+  border-radius: 4px;
+}
+
