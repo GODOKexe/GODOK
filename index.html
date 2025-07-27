@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>GODOK'un Sitesi</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
     <h1 id="baslik">GODOK’un Web Sitesine Hoş Geldin</h1>
     <p id="altYazi">Bugün ilk HTML kodumu yazıyorum.</p>
-    <a href="https://playvalorant.com/tr-tr/" target="_blank">VALORANT Resmi Sitesi</a>
-    <input type="text" id="isimKutusu" placeholder="Adını yaz">
+    <a href="https://playvalorant.com/tr-tr/" target="_blank" rel="noopener noreferrer">VALORANT Resmi Sitesi</a>
+    <input type="text" id="isimKutusu" placeholder="Adını yaz" />
     <button id="buton" onclick="merhabaDe()">Gönder</button>
   </div>
 
   <script>
     function merhabaDe() {
-      let isim = document.getElementById("isimKutusu").value;
+      let isim = document.getElementById("isimKutusu").value.trim();
       let baslik = document.getElementById("baslik");
       let altYazi = document.getElementById("altYazi");
       let buton = document.getElementById("buton");
@@ -37,9 +37,3 @@
 </body>
 </html>
 
-
-  document.getElementById("isimKutusu").value = "";
-}
-  </script>
-</body>
-</html>
