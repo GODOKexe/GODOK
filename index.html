@@ -3,30 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <title>GODOK'un Sitesi</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>GODOK’un Web Sitesine Hoş Geldin</h1>
-  <p>Bugün ilk HTML kodumu yazıyorum.</p>
-  <a href="https://playvalorant.com/tr-tr/?gclsrc=aw.ds&gad_source=1&gad_campaignid=10161919181&gclid=CjwKCAjw1ozEBhAdEiwAn9qbzStLbpIl3riLDPCibhwIwkUnNtmhWaYTzVcye99yWAON3sOikQiL1BoCRcEQAvD_BwE">VALORANT Resmi Sitesi</a>
-  <input type="text" id="isimKutusu" placeholder="Adını yaz">
-  <button onclick="merhabaDe()">Gönder</button>
+  <div class="container">
+    <h1 id="baslik">GODOK’un Web Sitesine Hoş Geldin</h1>
+    <p id="altYazi">Bugün ilk HTML kodumu yazıyorum.</p>
+    <a href="https://playvalorant.com/tr-tr/" target="_blank">VALORANT Resmi Sitesi</a>
+    <input type="text" id="isimKutusu" placeholder="Adını yaz">
+    <button id="buton" onclick="merhabaDe()">Gönder</button>
+  </div>
 
   <script>
     function merhabaDe() {
-        let isim = document.getElementById("isimKutusu").value;
-        let baslik = document.getElementById("baslik");
-        let altYazi = document.getElementById("altYazi");
-        let buton = document.getElementById("buton");
-      alert("SELAM " + isim + "!");
-      if (isim === "") {
-    alert("Lan adını yazsana!");
-    return;
-    }
-  baslik.innerText = "Selam " + isim.toUpperCase() + " 👋";
-  document.body.style.backgroundColor = "#222";
+      let isim = document.getElementById("isimKutusu").value;
+      let baslik = document.getElementById("baslik");
+      let altYazi = document.getElementById("altYazi");
+      let buton = document.getElementById("buton");
 
-  altYazi.innerText = "Artık senin siten burası.";
-  buton.innerText = "Tekrar Gönder";
+      if (isim === "") {
+        alert("Lan adını yazsana!");
+        return;
+      }
+
+      alert("SELAM " + isim + "!");
+      baslik.innerText = "Selam " + isim.toUpperCase() + " 👋";
+      document.body.style.backgroundColor = "#222";
+      altYazi.innerText = "Artık senin siten burası.";
+      buton.innerText = "Tekrar Gönder";
+      document.getElementById("isimKutusu").value = "";
+    }
+  </script>
+</body>
+</html>
+
   document.getElementById("isimKutusu").value = "";
 }
   </script>
