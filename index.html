@@ -2,34 +2,56 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8" />
-  <title>GODOK'un Sitesi</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>GODOK Firebase Modüler SDK</title>
 </head>
 <body>
-  <div class="container">
-    <h1 id="baslik">GODOK’un Web Sitesine Hoş Geldin</h1>
-    <p id="altYazi">Bugün ilk HTML kodumu yazıyorum.</p>
-    <input type="text" id="isimKutusu" placeholder="Adını yaz" />
-    <button id="buton" onclick="merhabaDe()">Gönder</button>
-  </div>
+  <h1 id="baslik">GODOK’un Web Sitesine Hoş Geldin</h1>
+  <p id="altYazi">Bugün ilk HTML kodumu yazıyorum.</p>
+  <a href="kendini-tanit.html"><button>Kendini Tanıt</button></a>
+  <a href="ziyaretciler.html"><button>Yazdıklarını Gör</button></a>
+  <input type="text" id="isimKutusu" placeholder="Adını yaz" />
+  <button id="buton">Gönder</button>
 
-  <script>
-    function merhabaDe() {
-      let isim = document.getElementById("isimKutusu").value.trim();
-      let baslik = document.getElementById("baslik");
-      let altYazi = document.getElementById("altYazi");
-      let buton = document.getElementById("buton");
+  <div id="gelenIsimler"></div>
 
-      if (isim === "") {
+
+  <script type="module">
+
+
+
+
+;
+
+    // Elementleri seç
+     isimKutusu = document.getElementById("isimKutusu");
+     buton = document.getElementById("buton");
+     baslik = document.getElementById("baslik");
+     altYazi = document.getElementById("altYazi");
+     gelenIsimler = document.getElementById("gelenIsimler");
+
+    // Butona tıklandığında veri gönder
+    buton.addEventListener("click", () => {
+      if (!isim) {
         alert("Lan adını yazsana!");
         return;
       }
+
+
       baslik.innerText = "Selam " + isim.toUpperCase() + " 👋";
       document.body.style.backgroundColor = "#222";
       altYazi.innerText = "Artık senin siten burası.";
       buton.innerText = "Tekrar Gönder";
-    }
+
+
+
+      isimKutusu.value = "";
+    });
+
+
+    
   </script>
 </body>
 </html>
+
+
 
